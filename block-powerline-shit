@@ -1,0 +1,6 @@
+#!/bin/sh
+# Filters out powerline broadcast packets from hitting my interface
+# and polluting metrics.
+# @see https://superuser.com/questions/1421591/disable-homeplug-feature-on-fritzbox
+
+ip link set dev enp2s0 xdp obj filter.o sec .text
